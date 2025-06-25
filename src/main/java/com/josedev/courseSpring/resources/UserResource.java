@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.josedev.courseSpring.entities.User;
 
-@RestController
-@RequestMapping(value = "/users")
+@RestController // Definindo que essa classe vai ser uma controladora REST
+@RequestMapping(value = "/users") // Definindo que essa classe vai ter esse endereço de web
 public class UserResource {
 	@GetMapping
 	public ResponseEntity<User> findAll(){
 		User u = new User(1L, "Xande", "xandinhoS2@gmail.com", "999999999", "123456");
-		return ResponseEntity.ok().body(u);
+		return ResponseEntity.ok().body(u); // Definindo que se estiver OK aprensentar o "body"
 	}
 }

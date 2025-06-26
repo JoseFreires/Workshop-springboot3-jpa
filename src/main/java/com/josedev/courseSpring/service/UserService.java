@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.josedev.courseSpring.entities.User;
 import com.josedev.courseSpring.repositories.UserRepository;
 
-
+// Serviço de usuário executa o que o resource
 @Service
 public class UserService {
 	@Autowired

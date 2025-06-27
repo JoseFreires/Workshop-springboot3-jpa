@@ -14,7 +14,7 @@ import com.josedev.courseSpring.service.ProductService;
 
 
 @RestController // Definindo que essa classe vai ser uma controladora REST
-@RequestMapping(value = "/Products") // Definindo que essa classe vai ter esse endereço de web
+@RequestMapping(value = "/products") // Definindo que essa classe vai ter esse endereço de web
 public class ProductResource {
 	
 	// Vincula o resource com o service

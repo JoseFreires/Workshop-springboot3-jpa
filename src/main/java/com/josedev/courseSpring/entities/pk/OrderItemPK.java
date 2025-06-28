@@ -3,7 +3,6 @@ package com.josedev.courseSpring.entities.pk;
 import java.io.Serializable;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.josedev.courseSpring.entities.Order;
 import com.josedev.courseSpring.entities.Product;
 

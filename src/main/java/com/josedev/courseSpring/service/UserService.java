@@ -11,6 +11,9 @@ import org.springframework.stereotype.Service;
 import com.josedev.courseSpring.entities.User;
 import com.josedev.courseSpring.repositories.UserRepository;
 import com.josedev.courseSpring.service.exceptions.ResourceNotFoundException;
+
+import jakarta.persistence.EntityNotFoundException;
+
 import com.josedev.courseSpring.service.exceptions.DatabaseException;
 
 // Serviço de usuário executa o que o resource
@@ -44,9 +47,14 @@ public class UserService {
 	}
 	
 	public User update(Long id, User obj) {
-		User entity = repository.getReferenceById(id);
-		updateData(entity, obj);
-		return repository.save(entity);
+		try {
+			User entity = repository.getReferenceById(id);
+			updateData(entity, obj);
+			return repository.save(entity);
+		} catch(EntityNotFoundException e) {
+			throw new ResourceNotFoundException(id);
+		}
+		
 	}
 
 	private void updateData(User entity, User obj) {

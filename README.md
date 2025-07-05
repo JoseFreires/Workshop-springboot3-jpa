@@ -17,8 +17,10 @@ Boot e como realizar um CRUD com a linguagem Java utilizando bibliotecas que exe
 * H2.
 
 ## Domain Model
-
-
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/7f263af2-499d-445c-8f45-7b452bd49381" style="width: 850px"  />
+</p>
+<p align="center">(Diagrama criado pelo professor Nélio Alves)</p>
 
 ## Conceitos Explorados
 
